@@ -24,12 +24,12 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<capistrano>, [">= 2.5.3", "<=2.14.2"])
+      s.add_runtime_dependency(%q<capistrano>, [">= #{MIN_CAPISTRANO_VERSION}", "~> #{MAX_CAPISTRANO_VERSION}"])
     else
-      s.add_dependency(%q<capistrano>, [">= 2.5.3", "<=2.14.2"])
+      s.add_dependency(%q<capistrano>, [">= #{MIN_CAPISTRANO_VERSION}", "~> #{MAX_CAPISTRANO_VERSION}"])
     end
   else
-    s.add_dependency(%q<capistrano>, [">= 2.5.3", "<=2.14.2"])
+    s.add_dependency(%q<capistrano>, [">= #{MIN_CAPISTRANO_VERSION}", "~> #{MAX_CAPISTRANO_VERSION}"])
   end
 end
 
