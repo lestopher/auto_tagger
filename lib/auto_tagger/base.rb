@@ -31,7 +31,7 @@ module AutoTagger
     def create_ref(commit = nil)
       ensure_stage
       fetch
-      new_tag = repo.refs.create(commit || repo.latest_commit_sha, ref_name)
+      new_tag = repo.refs.create(commit.present? || repo.latest_commit_sha, ref_name)
       push
       new_tag
     end
